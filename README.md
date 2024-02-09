@@ -1,1 +1,1 @@
-# C-DailyCodes
+# CppDailyCodes
