@@ -1,6 +1,11 @@
 #include<iostream>
-#include<windows.h>           
+#include<windows.h>   
+#include<chrono>
+#include<thread>
 using namespace std;
+using namespace std::this_thread;
+using namespace std::chrono_literals;
+using std::chrono::system_clock;
 
 string inventory[10];
 void Fishing();
@@ -21,7 +26,8 @@ int main() {
 			cout << "Press F to fish" << endl;
 			cin >> input;
 			if (input == 'F' || input == 'f') {
-				Sleep(5);
+				cout << "fishing..." << endl;
+				sleep_for(1000ns);
 				Fishing();
 			}
 			break;
